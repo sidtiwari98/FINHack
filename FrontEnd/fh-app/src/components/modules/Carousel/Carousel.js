@@ -11,9 +11,9 @@ class Carousel extends Component {
             slideSectionCard: {
 
                 0: {
-                    header: 'Welcome to P2PI Insurance',
-                    content: ' Everything is better together ',
-                    button: 'Logged In',
+                    header: ' FORGET EVERYTHING ABOUT TRADITIONAL INSURANCE',
+                    content: 'EMPOWERING HASTLE FREE, CHEAP AND INSTANT CLAIM PLATFORM  ',
+                    // button: 'Logged In',
                     showLearnMore: false
 
                 },

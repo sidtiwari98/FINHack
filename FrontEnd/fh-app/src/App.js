@@ -8,6 +8,7 @@ import Claim from './views/Claim/claim'
 import Form from './components/Form/form'
 // import Navbar from './components/NavBar/navbar'
 import CardPage from './views/CardPage/CardPage'
+// import Chatbot from './components/Chatbot/chatbot'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/Premium" component={CardPage} />
       <Route path="/Claim" component={Claim} />
     </Switch>
+    
   );
 }
 
