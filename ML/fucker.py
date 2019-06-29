@@ -25,4 +25,17 @@ reg = Ridge()
 reg.fit(X_train, y_train)
 to_pred = pd.DataFrame.from_dict([{"age": int(sys.argv[1]), "bmi": float(sys.argv[2]), "children": int(sys.argv[3]), "female": int(sys.argv[4]),
                                     "male": int(sys.argv[5]), "smoke_no": int(sys.argv[6]), "smoke_yes": int(sys.argv[7])}], orient='columns')
-print(float(reg.predict(to_pred)))
+
+ret1 = (int(reg.predict(to_pred)))
+
+X = data.drop(["charges", "charges_q"], axis=1)
+y = data["charges"]
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42, test_size=0.3)
+reg = Ridge()
+reg.fit(X_train, y_train)
+to_pred = pd.DataFrame.from_dict([{"age": int(sys.argv[1]), "bmi": float(sys.argv[2]), "children": int(sys.argv[3]), "female": int(sys.argv[4]),
+                                    "male": int(sys.argv[5]), "smoke_no": int(sys.argv[6]), "smoke_yes": int(sys.argv[7])}], orient='columns')
+
+ret2 =  (float(reg.predict(to_pred)))
+
+print(ret1, ret2)
