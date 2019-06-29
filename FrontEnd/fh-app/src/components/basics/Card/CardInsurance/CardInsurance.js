@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 class CardInsurance extends Component {
@@ -22,29 +23,30 @@ class CardInsurance extends Component {
                     showLink: false
                 }
             ],
-        
+
         }
         this.generateInsuranceCards = this.generateInsuranceCards.bind(this);
     }
 
-    
 
-   
+
+
     generateInsuranceCards(section2data) {
         console.log(section2data)
         return section2data.map((eachInfo, i) => {
             return <div
                 key={'questionCard_' + i}
                 className='carousel__item swiper-slide'
-               
                 style={{ marginRight: '15px' }}>
-                <div className='card card--question'>
-                    <div className='card__container'>
-                        <div className='card__content'>
-                            <p>{eachInfo.cardContent}</p>
+                <Link to="/Form" style={{ color: "Black" }}>
+                    <div className='card card--question'>
+                        <div className='card__container' >
+                            <div className='card__content'>
+                                <p>{eachInfo.cardContent}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Link>
                 {
                     eachInfo.showLink
                     &&
@@ -62,7 +64,7 @@ class CardInsurance extends Component {
         let insuranceCards = this.generateInsuranceCards(this.state.section2data);
         return (
             <div className='carousel__container swiper-wrapper '
-           
+
             >
                 {insuranceCards}
             </div>
@@ -70,4 +72,4 @@ class CardInsurance extends Component {
     }
 }
 
-export default CardInsurance ;
+export default CardInsurance;

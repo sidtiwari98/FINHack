@@ -1,17 +1,19 @@
 import React from 'react';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Radio from '../Radio/radio'
 import Checkbox from '../Checkbox/checkbox'
+import OutlinedButtons from '../Button/button'
 import { InputBase } from '@material-ui/core';
 
 const currencies = [
-    {
-        value: 'zero',
-        label: '0',
-      },
+  {
+    value: 'zero',
+    label: '0',
+  },
   {
     value: 'one',
     label: '1',
@@ -30,15 +32,15 @@ const currencies = [
   },
 ];
 const choice = [
-    {
-        value: '1',
-        label: 'Male',
-      },
+  {
+    value: '1',
+    label: 'Male',
+  },
   {
     value: '0',
     label: 'Female',
   },
-  
+
 ];
 const useStyles = makeStyles(theme => ({
   container: {
@@ -101,7 +103,7 @@ export default function OutlinedTextFields() {
         margin="normal"
         variant="outlined"
       />
-      <br/>
+      <br />
       <TextField
         error
         id="outlined-error"
@@ -258,58 +260,71 @@ export default function OutlinedTextFields() {
           </MenuItem>
         ))}
       </TextField> */}
-      <div className="style1" style={{display:"flex",flexDirection:"column"}}>
-      <Radio/>
-      <div className="style1" style={{display:"flex",flexDirection:"row"}}>
-      <TextField
-        id="outlined-select-currency"
-        select
-        label="No. of Children"
-        className={classes.textField}
-        value={values.currency}
-        onChange={handleChange('currency')}
-        SelectProps={{
-          MenuProps: {
-            className: classes.menu,
-          },
-        }}
-        helperText="Number of Children"
-        margin="normal"
-        variant="outlined"
-      >
-        {currencies.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
-      <TextField
-        id="outlined-select-currency"
-        select
-        label="Gender"
-        className={classes.textField}
-        value={values.choice}
-        onChange={handleChange('choice')}
-        SelectProps={{
-          MenuProps: {
-            className: classes.menu,
-          },
-        }}
-        helperText="Please tell your gender"
-        margin="normal"
-        variant="outlined"
-      >
-        {choice.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="style1" style={{ display: "flex", flexDirection: "column" }}>
+        <Radio />
+        <div className="style1" style={{ display: "flex", flexDirection: "row" }}>
+          <TextField
+            id="outlined-select-currency"
+            select
+            label="No. of Children"
+            className={classes.textField}
+            value={values.currency}
+            onChange={handleChange('currency')}
+            SelectProps={{
+              MenuProps: {
+                className: classes.menu,
+              },
+            }}
+            helperText="Number of Children"
+            margin="normal"
+            variant="outlined"
+          >
+            {currencies.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+          <TextField
+            id="outlined-select-currency"
+            select
+            label="Gender"
+            className={classes.textField}
+            value={values.choice}
+            onChange={handleChange('choice')}
+            SelectProps={{
+              MenuProps: {
+                className: classes.menu,
+              },
+            }}
+            helperText="Please tell your gender"
+            margin="normal"
+            variant="outlined"
+          >
+            {choice.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+        </div>
+        <Checkbox />
+        <Link to="/Premium" style={{ color: '#FFF' }}>
+          <button style = {{
+            backgroundColor: "white",
+            border: "2px solid #008CBA",
+            color: "blue",
+            padding: "8px 17px",
+            textAlign: "center",
+            textDecoration: "none",
+            display: "inline-block",
+            fontSize: "16px",
+            margin: "8px 42px",
+            cursor:" pointer"
+          }}>Submit</button>
+        </Link>
       </div>
-      <Checkbox/>
-    
-      </div>
-      
+
       {/* <TextField
         id="outlined-select-currency-native"
         select
@@ -354,6 +369,7 @@ export default function OutlinedTextFields() {
         variant="outlined"
         inputProps={{ 'aria-label': 'bare' }}
       /> */}
+
     </form>
   );
 }

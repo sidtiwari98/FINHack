@@ -34,8 +34,6 @@ class Carousel extends Component {
 
                 <div className='carousel carousel--hero-slider carousel--grey-bg swiper-container swiper-container-horizontal'>
                     <div >
-
-                       
                         <div className='carousel__container swiper-wrapper'>
                             <div className='carousel__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active'
                                 style={{ width: '100%' }}>
