@@ -2,7 +2,7 @@ import os
 import sys
 import pandas as pd
 
-from sklearn.externals import joblib
+import joblib
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import Ridge
 
