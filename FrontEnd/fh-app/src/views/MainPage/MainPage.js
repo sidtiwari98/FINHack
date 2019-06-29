@@ -5,11 +5,14 @@ import CardInsurance  from '../../components/basics/Card/CardInsurance/CardInsur
 import ServiceData from '../../components/basics/ServiceData/ServiceData';
 
 
+
+
 class MainPage extends Component {
+
+
     render() {
         return (
             <div style={{ margin: '0px -15px' }}>
-
                 <Carousel />
                 <InsuranceSection>
                 <CardInsurance />
