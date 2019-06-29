@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -25,7 +26,9 @@ export default function SimpleAppBar() {
       <AppBar position="static" color="inherit">
         <Toolbar>
          <Typography className={classes.typo} variant="h6"  >
-            P2PI Insurance
+           <Link to = "/">P2PI Insurance</Link>
+          </Typography>
+          <Typography className={classes.typo} variant="h6"  >
           </Typography>
           
         </Toolbar>
