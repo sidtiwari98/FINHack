@@ -3,10 +3,12 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var logger = require('morgan');
 var path = require('path');
+var cors = require('cors');
 
 var api_v1 = require('./v1/api_route');
 
 var app = express();
+app.use(cors);
 var http = require('http').Server(app);
 
 app.use(logger('dev'));
