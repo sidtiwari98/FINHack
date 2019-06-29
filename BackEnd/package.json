@@ -1,0 +1,19 @@
+{
+  "name": "fhack-api",
+  "version": "1.0.0",
+  "description": "API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atibrewal98/FINHack.git"
+  },
+  "author": "Ankit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atibrewal98/FINHack/issues"
+  },
+  "homepage": "https://github.com/atibrewal98/FINHack#readme"
+}
