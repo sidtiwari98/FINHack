@@ -7,8 +7,9 @@
     border-radius: 5px;
 
     &--dark-navy {
-        background: rgba(40, 44, 57, 0.95);
+        background:#2B2C28;
         color: $theme-white;
+        opacity: 0.8;
     }
 
     // modules card-icon-hover style
@@ -107,6 +108,8 @@
                 font-size: calculateSize(18px, 'rem');
                 line-height: calculateSize(25px, 'rem');
                 font-weight: 500;
+                background-color: #063449;
+                color:white
 
             }
 

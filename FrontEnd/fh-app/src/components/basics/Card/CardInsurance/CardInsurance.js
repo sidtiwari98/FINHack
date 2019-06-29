@@ -13,12 +13,12 @@ class CardInsurance extends Component {
                     showLink: false
                 },
                 {
-                    cardContent: 'AUTO INSURANCE',
+                    cardContent: 'TRAVEL INSURANCE',
                     link: 'http://www.google.com/',
                     showLink: false
                 },
                 {
-                    cardContent: 'SEX INSURANCE',
+                    cardContent: 'LIFE INSURANCE',
                     link: 'http://www.google.com/',
                     showLink: false
                 }
@@ -42,7 +42,7 @@ class CardInsurance extends Component {
                     <div className='card card--question'>
                         <div className='card__container' >
                             <div className='card__content'>
-                                <p>{eachInfo.cardContent}</p>
+                                <p style={{textAlign:"center"}}>{eachInfo.cardContent}</p>
                             </div>
                         </div>
                     </div>

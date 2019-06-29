@@ -14,18 +14,18 @@ class ServiceData extends Component {
       
         0: {
           image: UniqueDataImg,
-          heading: 'Heading 1',
-          content: 'ye hai content 1 bhosadchod madarchod padh lo dhyanan  se lobve you 2'
+          heading: 'Smart Premium',
+          content: 'This is the content for Smart Premium'
         },
         1: {
           image: SurveyImg,
-          heading: 'Heading 2',
-          content: 'ye hai content 1 bhosadchod madarchod padh lo dhyanan  se lobve you 2 copy pasted another time'
+          heading: 'Secure Transactions',
+          content: 'This is the content for Secure Transactions'
         },
         2: {
           image: RoboticImg,
-          heading: 'Heading 3',
-          content: 'ye hai content 1 bhosadchod madarchod padh lo dhyanan  se lobve you 2 copy pasted  ...'
+          heading: 'P2P',
+          content: 'This is the content for Peer-to-Peer Transfer System'
         }
       },
       loading: false,
@@ -50,12 +50,12 @@ class ServiceData extends Component {
           <div className='row mt-4'>
             <div className='col-4'>
               <div className='image'>
-                <div className='image__container'><img src= {this.state.section4data[0].image} alt={''} /></div>
+                <div className='image__container' ><img src= {this.state.section4data[0].image} alt={''} /></div>
               </div>
               <div className='heading  text-uppercase text-center mt-4'>
                 <h3>{this.state.section4data[0].heading}</h3>
               </div>
-              <p className='mt-4 text-center'>{this.state.section4data[0].content}</p>
+              <p className='mt-4 text-center' style={{paddingTop:"10px"}}>{this.state.section4data[0].content}</p>
             </div>
             <div className='col-4'>
               <div className='image'>

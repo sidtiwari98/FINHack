@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import Swiper from 'swiper';
-
+import Button from '../../Button/button'
 class InsuranceSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
       section2data: {
-        section2Heading: 'Insurances',
+        section2Heading: 'Insurances Offered',
         infoText: 'These are the insursances',
         clickCardsText: 'More Info',
         ButtonText: 'More Info'
@@ -71,9 +71,8 @@ class InsuranceSection extends Component {
 
           <div className='row mt-4 justify-content-center'>
             <div className='col-auto'>
-              <div className='button d-inline-block button--lg-orange'>
-                <a href="#" type='button'>{this.state.section2data.ButtonText}</a>
-              </div>
+         <Button title="More Info"/>
+              
             </div>
           </div>
         </div>

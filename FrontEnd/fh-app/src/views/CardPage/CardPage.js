@@ -1,82 +1,66 @@
 import React from 'react';
-import Swiper from 'swiper';
 import CardPremium from '../../components/CardPremium/CardPremium'
 import Button from '../../components/Button/button'
 
 export default class CardPage extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.cardSelected=this.cardSelected.bind(this)
-        this.state={
-            flag:false
+        this.cardSelected = this.cardSelected.bind(this)
+        this.state = {
+            flag: false
         }
     }
-    
-    async componentDidMount() {
-        let swiper = new Swiper(this.swiper, {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    }
-   
 
-    cardSelected(){
+    cardSelected() {
         this.setState({
-            flag:true
+            flag: !this.state.flag
         })
     }
     render() {
-        if(this.state.flag==false){
-        return (
-            <div style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                padding:"100px"
-            }}>
-                <div><CardPremium/></div>
-                <div onClick={this.cardSelected}><CardPremium/></div>
+        if (this.state.flag == false) {
+            return (
+                <div>
+                    <div style={{
+                        textAlign: "center",
+                        padding: "50px",
+                    }}>
+                        <p style={{ color: "black", fontSize: "48px", fontFamily: "Verdana" }}>Great! Choose the plan for you:</p>
+                    </div>
+                    <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        padding: "20px",
+                    }}>
+                        <div><CardPremium /></div>
+                        <div onClick={this.cardSelected}><CardPremium /></div>
 
+                        <div><CardPremium /></div>
 
-                <div><CardPremium/></div>
+                    </div>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <div
+                        style={{ padding: "50px", }}
+                    >
+                        <br />
+                    </div>
+                    <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        padding: "20px",
 
-            </div>
-        );
-        }else{
-            return(
-            <div style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-           
-            
-                padding:"90px",
-                
-            }}>
-                <div style={{opacity:0.2}}><CardPremium/></div>
-                
-                <div onClick={this.cardSelected} style={{boxShadow:"40px"}}><CardPremium/></div>
-
-                
-                
-                <div style={{opacity:0.2}}><CardPremium/></div>
-
-            </div>
+                    }}>
+                        <div style={{ opacity: 0.2 }}><CardPremium /></div>
+                        <div onClick={this.cardSelected} style={{ boxShadow: "40px" }}><CardPremium /></div>
+                        <div style={{ opacity: 0.2 }}><CardPremium /></div>
+                    </div>
+                </div >
             )
         }
 

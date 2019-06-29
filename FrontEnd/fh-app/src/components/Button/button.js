@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function OutlinedButtons() {
+export default function OutlinedButtons(props) {
   const classes = useStyles();
 
   return (
@@ -21,7 +21,7 @@ export default function OutlinedButtons() {
         Default
       </Button> */}
       <Button variant="outlined" color="primary" className={classes.button} size="medium" disableFocusRipple >
-        SUBMIT
+        {props.title}
       </Button>
       {/* <Button variant="outlined" color="secondary" className={classes.button}>
         Secondary

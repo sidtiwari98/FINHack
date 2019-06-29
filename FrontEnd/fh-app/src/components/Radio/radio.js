@@ -35,7 +35,7 @@ export default function RadioButtonsGroup() {
   return (
     <div className={classes.root}>
       <FormControl component="fieldset" className={classes.formControl}>
-        
+        <div style={{display:"flex",flexDirection:"row"}}>
         <RadioGroup
           aria-label="Gender"
           name="gender1"
@@ -48,14 +48,23 @@ export default function RadioButtonsGroup() {
           <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
           <FormControlLabel value="No" control={<Radio />} label="No" />
           </div>
-          {/* <FormControlLabel value="other" control={<Radio />} label="Other" />
-          <FormControlLabel
-            value="disabled"
-            disabled
-            control={<Radio />}
-            label="(Disabled option)"
-          /> */}
+         
         </RadioGroup>
+        <RadioGroup
+          aria-label="Gender"
+          name="gender1"
+          className={classes.group}
+          value={value}
+          onChange={handleChange}
+        >
+            <div style={{display:"flex",flexDirection:"row"}}>
+           <div className={classes.labelStyle}><FormLabel component="legend">Do you drink?  </FormLabel></div> 
+          <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+          <FormControlLabel value="No" control={<Radio />} label="No" />
+          </div>
+         
+        </RadioGroup>
+        </div>
       </FormControl>
       {/* <FormControl component="fieldset" className={classes.formControl}>
         <FormLabel component="legend">Gender</FormLabel>
