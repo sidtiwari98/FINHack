@@ -27,7 +27,7 @@ class InsuranceSection extends Component {
       centeredSlides: true,
       loop: true,
       autoplay: {
-        delay: 3500,
+        delay: 2000,
         disableOnInteraction: false,
       },
       pagination: {
