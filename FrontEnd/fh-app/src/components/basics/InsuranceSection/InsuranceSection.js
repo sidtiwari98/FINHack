@@ -43,7 +43,6 @@ class InsuranceSection extends Component {
 
   render() {
     const children = this.props.children;
-    console.log(this.state)
     return (
       <section className='section section--grey-bg' >
         <div className='section__container container'>
