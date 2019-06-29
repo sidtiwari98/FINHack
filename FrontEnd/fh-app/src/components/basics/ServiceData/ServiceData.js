@@ -50,16 +50,16 @@ class ServiceData extends Component {
           <div className='row mt-4'>
             <div className='col-4'>
               <div className='image'>
-                <div className='image__container' ><img src= {this.state.section4data[0].image} alt={''} /></div>
+                <div className='image__container' style={{paddingBottom:"25px"}} ><img src= {this.state.section4data[0].image} alt={''} /></div>
               </div>
               <div className='heading  text-uppercase text-center mt-4'>
                 <h3>{this.state.section4data[0].heading}</h3>
               </div>
-              <p className='mt-4 text-center' style={{paddingTop:"10px"}}>{this.state.section4data[0].content}</p>
+              <p className='mt-4 text-center' >{this.state.section4data[0].content}</p>
             </div>
             <div className='col-4'>
               <div className='image'>
-                <div className='image__container'><img src={ this.state.section4data[1].image} alt={''} /></div>
+                <div className='image__container'style={{paddingBottom:"25px"}}><img src={ this.state.section4data[1].image} alt={''} /></div>
               </div>
               <div className='heading  text-uppercase text-center mt-4'>
                 <h3>{this.state.section4data[1].heading}</h3>

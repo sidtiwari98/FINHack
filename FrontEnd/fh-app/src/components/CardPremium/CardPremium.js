@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { fontFamily, textAlign } from '@material-ui/system';
+import Dialog from '../Dialog/dialog'
 
 const useStyles = makeStyles({
     card: {
@@ -49,9 +50,9 @@ export default class MediaCard extends React.Component {
                             </Typography>
                             <div style={{ display: "flex", justifyContent: "center" }}>
                                 <CardActions>
-                                    <Button size="large" color="primary">
-                                        Buy Now
-                                    </Button>
+                                    
+                                       <Dialog/>
+                                   
                                 </CardActions>
                             </div>
                             <Typography gutterBottom variant="h5" component="h2">

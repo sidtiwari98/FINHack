@@ -16,7 +16,7 @@ export default class Claim extends React.Component {
                     steps={[
                         {
                             id: 'hello-world',
-                            message: 'Hi How are you',
+                            message: 'Hello I hope you are doing good. I got to know that you wanted to claim your insurance.',
                             end: false,
                         },
                         {

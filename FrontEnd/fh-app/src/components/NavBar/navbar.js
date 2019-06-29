@@ -25,13 +25,16 @@ export default function SimpleAppBar() {
     <div className={classes.root}>
       <AppBar position="static" color="inherit">
         <Toolbar>
-
+          <div style={{display:"flex",flexDirection:"column"}}>
          <Typography className={classes.typo} variant="h4"  >
          <Link to = "/"> P2PI Insurance</Link>
           </Typography>
+          <div style={{paddingLeft:"50px"}}>
           <Typography variant="subtitle2">
               Everything is better together
           </Typography>
+          </div>
+          </div>
           
         </Toolbar>
       </AppBar>

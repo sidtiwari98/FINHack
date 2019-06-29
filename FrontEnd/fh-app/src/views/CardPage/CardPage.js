@@ -1,6 +1,7 @@
 import React from 'react';
 import CardPremium from '../../components/CardPremium/CardPremium'
 import Button from '../../components/Button/button'
+import Dialog from '../../components/Dialog/dialog'
 
 export default class CardPage extends React.Component {
 
@@ -9,18 +10,18 @@ export default class CardPage extends React.Component {
         this.cardSelected = this.cardSelected.bind(this)
         this.state = {
             flag: false,
-            counter:0
+            
         }
     }
 
     cardSelected() {
         this.setState({
             flag: !this.state.flag,
-            counter:this.state.counter+1
+            
         })
     }
     render() {
-        if (this.state.flag == false && this.state.counter<2) {
+        if (this.state.flag == false) {
             return (
                 <div>
                     <div style={{
@@ -43,7 +44,7 @@ export default class CardPage extends React.Component {
                     </div>
                 </div>
             );
-        } else if(this.state.flag==true) {
+        } else {
             return (
                 <div>
                     <div
@@ -64,13 +65,8 @@ export default class CardPage extends React.Component {
                     </div>
                 </div >
             )
-        }else{
-            return(
-                <div>
-                    hello
-                </div>
-            )
-        }
+        } 
+        
 
     }
 }
