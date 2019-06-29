@@ -8,24 +8,26 @@ export default class CardPage extends React.Component {
         super(props)
         this.cardSelected = this.cardSelected.bind(this)
         this.state = {
-            flag: false
+            flag: false,
+            counter:0
         }
     }
 
     cardSelected() {
         this.setState({
-            flag: !this.state.flag
+            flag: !this.state.flag,
+            counter:this.state.counter+1
         })
     }
     render() {
-        if (this.state.flag == false) {
+        if (this.state.flag == false && this.state.counter<2) {
             return (
                 <div>
                     <div style={{
                         textAlign: "center",
                         padding: "50px",
                     }}>
-                        <p style={{ color: "black", fontSize: "48px", fontFamily: "Verdana" }}>Great! Choose the plan for you:</p>
+                        <p style={{ color: "black", fontSize: "48px", fontFamily: "Verdana" }}>Great! Choose your Plan:</p>
                     </div>
                     <div style={{
                         display: "flex",
@@ -41,7 +43,7 @@ export default class CardPage extends React.Component {
                     </div>
                 </div>
             );
-        } else {
+        } else if(this.state.flag==true) {
             return (
                 <div>
                     <div
@@ -61,6 +63,12 @@ export default class CardPage extends React.Component {
                         <div style={{ opacity: 0.2 }}><CardPremium /></div>
                     </div>
                 </div >
+            )
+        }else{
+            return(
+                <div>
+                    hello
+                </div>
             )
         }
 
