@@ -41,7 +41,7 @@ export default function CheckboxesGroup() {
             control={<Checkbox checked={gilad} onChange={handleChange('gilad')} value="gilad" />}
             
           />
-            <div style={{alignSelf:"center"}}><FormLabel component="legend">I agree to the Terms and Services</FormLabel></div>
+            <div style={{alignSelf:"center"}}><FormLabel component="legend">I agree to the Terms and Services and all the information entered above is correct to the best of my knowledge.</FormLabel></div>
           
           </div>
        

@@ -11,9 +11,9 @@ class Carousel extends Component {
             slideSectionCard: {
 
                 0: {
-                    header: 'Welcome to XXX Insurance',
-                    content: ' Our insurance compnay description ',
-                    button: 'Sign Up',
+                    header: 'Welcome to P2PI Insurance',
+                    content: ' Everything is better together ',
+                    button: 'Logged In',
                     showLearnMore: false
 
                 },
