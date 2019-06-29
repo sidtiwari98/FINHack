@@ -15,17 +15,17 @@ class ServiceData extends Component {
         0: {
           image: UniqueDataImg,
           heading: 'Smart Premium',
-          content: 'This is the content for Smart Premium'
+          content: 'Minimum Premiums customised to you needs  '
         },
         1: {
           image: SurveyImg,
-          heading: 'Secure Transactions',
-          content: 'This is the content for Secure Transactions'
+          heading: 'Faster Claims',
+          content: 'Seamless hastle-fee and instant claiming process'
         },
         2: {
           image: RoboticImg,
-          heading: 'P2P',
-          content: 'This is the content for Peer-to-Peer Transfer System'
+          heading: 'Peer-to-Peer',
+          content: 'From changing traditions to accomodating needs'
         }
       },
       loading: false,

@@ -7,8 +7,8 @@
     border-radius: 5px;
 
     &--dark-navy {
-        background:#2B2C28;
-        color: $theme-white;
+        background:#FCFCFC;
+        color: #B81365;
         opacity: 0.8;
     }
 
@@ -1020,6 +1020,7 @@
                         &-select {
                             margin-right: 0;
                             margin-bottom: 1rem;
+                            font-size: 1.09rem
                         }
                         &-icons {
                             flex-direction: column;
