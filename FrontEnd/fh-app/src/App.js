@@ -13,8 +13,8 @@ function App() {
     <div>
       <Navbar/>
       {/* <Form/> */}
-   {/* <MainPage/> */}
-   <CardPage />
+   <MainPage/>
+   {/* <CardPage /> */}
    <Footer/>
    </div>
   );
