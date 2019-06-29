@@ -7,16 +7,14 @@ import MainPage from './views/MainPage/MainPage'
 import Form from './components/Form/form'
 // import Navbar from './components/NavBar/navbar'
 import CardPage from './views/CardPage/CardPage'
-import Chatbot from './components/Chatbot/chatbot'
 
 function App() {
   return (
-    // <Switch>
-    //   <Route path="/" exact component={MainPage} />
-    //   <Route path="/Form" component={Form} />
-    //   <Route path="/Premium" component={CardPage} />
-    // </Switch>
-    <Chatbot/>
+    <Switch>
+      <Route path="/" exact component={MainPage} />
+      <Route path="/Form" component={Form} />
+      <Route path="/Premium" component={CardPage} />
+    </Switch>
   );
 }
 

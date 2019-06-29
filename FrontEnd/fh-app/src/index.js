@@ -7,6 +7,7 @@ import Footer from './components/Footer/footer'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
 ReactDOM.render(
     <BrowserRouter>
         <Navbar />
