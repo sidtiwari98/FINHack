@@ -1,10 +1,9 @@
 import React from 'react';
 import CardPremium from '../../components/CardPremium/CardPremium'
 import Button from '../../components/Button/button'
+import Dialog from '../../components/Dialog/dialog'
 import axios from 'axios';
 const API_URL = 'http://p2pi.tech:6969';
-
-import Dialog from '../../components/Dialog/dialog'
 
 export default class CardPage extends React.Component {
 
