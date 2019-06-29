@@ -27,7 +27,7 @@ export default function SimpleAppBar() {
         <Toolbar>
 
          <Typography className={classes.typo} variant="h4"  >
-            P2PI Insurance
+         <Link to = "/"> P2PI Insurance</Link>
           </Typography>
           <Typography variant="subtitle2">
               Everything is better together
