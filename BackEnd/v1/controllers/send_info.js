@@ -1,4 +1,6 @@
 let guy = require('../../db/guy');
+let { execFileSync } = require('child_process');
+const path = require('path');
 
 module.exports = (req, res) => {
     let data = req.body;
@@ -59,6 +61,12 @@ module.exports = (req, res) => {
         fucku();
         return;
     }
+
+    let gg = execFileSync('python3', ['fucker.py', '19', '27.9', '0', '1', '0', '0', '1'], {
+        cwd: path.resolve('../../../ML')
+    })
+
+    console.log(gg);
 
     res.send('.');
 }
