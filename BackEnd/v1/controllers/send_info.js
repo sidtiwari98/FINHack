@@ -1,4 +1,6 @@
 let guy = require('../../db/guy');
+let pool = require('../../db/pool');
+let client = require('../../db/client');
 let { execFileSync } = require('child_process');
 const path = require('path');
 
@@ -93,5 +95,7 @@ module.exports = (req, res) => {
     res.json({
         risk: shit[0],
         expected_cost: shit[1]
+
+
     })
 }
