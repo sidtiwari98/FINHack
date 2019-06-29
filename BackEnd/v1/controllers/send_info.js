@@ -63,10 +63,11 @@ module.exports = (req, res) => {
     }
 
     let gg = execFileSync('python3', ['fucker.py', '19', '27.9', '0', '1', '0', '0', '1'], {
-        cwd: path.resolve('../../../ML')
+        cwd: path.resolve('../ML/')
     })
 
-    console.log(gg);
-
-    res.send('.');
+    // console.log(gg.toString().trim());
+    // console.log(__dirname);
+    // console.log(path.resolve('../ML/'));
+    res.send(gg.toString().trim());
 }
