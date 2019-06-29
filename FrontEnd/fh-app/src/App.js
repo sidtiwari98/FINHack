@@ -5,13 +5,20 @@ import MainPage from './views/MainPage/MainPage'
 import Footer from './components/Footer/footer' //to check
 import Form from './components/Form/form'
 import Navbar from './components/NavBar/navbar'
+import Button from './components/Button/button'
 
 function App() {
   return (
     <div>
       <Navbar/>
-      {/* <Form/> */}
-   <MainPage/>
+      <br/>
+      <Form/>
+      <br/>
+      <Button/>
+      <br/>
+      <br/>
+      <br/>
+   {/* <MainPage/> */}
    <Footer/>
    </div>
   );

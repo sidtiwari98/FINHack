@@ -3,47 +3,64 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
+import Radio from '../Radio/radio'
+import Checkbox from '../Checkbox/checkbox'
+import { InputBase } from '@material-ui/core';
 
 const currencies = [
+    {
+        value: 'zero',
+        label: '0',
+      },
   {
-    value: 'USD',
-    label: '$',
+    value: 'one',
+    label: '1',
   },
   {
-    value: 'EUR',
-    label: '€',
+    value: 'two',
+    label: '2',
   },
   {
-    value: 'BTC',
-    label: '฿',
+    value: 'three',
+    label: '3',
   },
   {
-    value: 'JPY',
-    label: '¥',
+    value: 'four',
+    label: '4',
   },
 ];
-
+const choice = [
+    {
+        value: '1',
+        label: 'Male',
+      },
+  {
+    value: '0',
+    label: 'Female',
+  },
+  
+];
 const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
   },
   textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
+    marginLeft: theme.spacing(5),
+    marginRight: theme.spacing(5),
   },
   dense: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
   },
   menu: {
-    width: 200,
+    width: 2000,
   },
 }));
 
 export default function OutlinedTextFields() {
   const classes = useStyles();
   const [values, setValues] = React.useState({
-    name: 'Cat in the Hat',
+    name: 'John',
     age: '',
     multiline: 'Controlled',
     currency: 'EUR',
@@ -62,30 +79,35 @@ export default function OutlinedTextFields() {
         value={values.name}
         onChange={handleChange('name')}
         margin="normal"
+        fullWidth
         variant="outlined"
       />
       <TextField
         id="outlined-uncontrolled"
         label="Last Name"
-        defaultValue="foo"
+        defaultValue="Mall"
         className={classes.textField}
         margin="normal"
+        fullWidth
         variant="outlined"
       />
       <TextField
         required
         id="outlined-required"
         label="Age"
-        defaultValue="Hello World"
+        fullWidth
+        defaultValue="35"
         className={classes.textField}
         margin="normal"
         variant="outlined"
       />
+      <br/>
       <TextField
         error
         id="outlined-error"
         label="BMI"
-        defaultValue="Hello World"
+        fullWidth
+        defaultValue="22.3"
         className={classes.textField}
         margin="normal"
         variant="outlined"
@@ -109,7 +131,7 @@ export default function OutlinedTextFields() {
         margin="normal"
         variant="outlined"
       /> */}
-      <TextField
+      {/* <TextField
         id="outlined-password-input"
         label="Password"
         className={classes.textField}
@@ -117,8 +139,8 @@ export default function OutlinedTextFields() {
         autoComplete="current-password"
         margin="normal"
         variant="outlined"
-      />
-      <TextField
+      /> */}
+      {/* <TextField
         id="outlined-read-only-input"
         label="Read Only"
         defaultValue="Hello World"
@@ -128,8 +150,8 @@ export default function OutlinedTextFields() {
           readOnly: true,
         }}
         variant="outlined"
-      />
-      <TextField
+      /> */}
+      {/* <TextField
         id="outlined-dense"
         label="Dense"
         className={clsx(classes.textField, classes.dense)}
@@ -144,8 +166,8 @@ export default function OutlinedTextFields() {
         variant="outlined"
         multiline
         rowsMax="4"
-      />
-      <TextField
+      /> */}
+      {/* <TextField
         id="outlined-multiline-flexible"
         label="Multiline"
         multiline
@@ -156,8 +178,8 @@ export default function OutlinedTextFields() {
         margin="normal"
         helperText="hello"
         variant="outlined"
-      />
-      <TextField
+      /> */}
+      {/* <TextField
         id="outlined-multiline-static"
         label="Multiline"
         multiline
@@ -166,8 +188,8 @@ export default function OutlinedTextFields() {
         className={classes.textField}
         margin="normal"
         variant="outlined"
-      />
-      <TextField
+      /> */}
+      {/* <TextField
         id="outlined-helperText"
         label="Helper text"
         defaultValue="Default Value"
@@ -183,8 +205,8 @@ export default function OutlinedTextFields() {
         className={classes.textField}
         margin="normal"
         variant="outlined"
-      />
-      <TextField
+      /> */}
+      {/* <TextField
         id="outlined-textarea"
         label="Multiline Placeholder"
         placeholder="Placeholder"
@@ -205,19 +227,44 @@ export default function OutlinedTextFields() {
         }}
         margin="normal"
         variant="outlined"
-      />
-      <TextField
+      /> */}
+      {/* <TextField
         id="outlined-search"
         label="Search field"
         type="search"
         className={classes.textField}
         margin="normal"
         variant="outlined"
-      />
+      /> */}
+      {/* <TextField
+        id="outlined-select-currency"
+        select
+        label="Smoker?"
+        className={classes.textField}
+        value={values.choice}
+        onChange={handleChange('choice')}
+        SelectProps={{
+          MenuProps: {
+            className: classes.menu,
+          },
+        }}
+        helperText="Please tell if you smoke or not"
+        margin="normal"
+        variant="outlined"
+      >
+        {choice.map(option => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField> */}
+      <div className="style1" style={{display:"flex",flexDirection:"column"}}>
+      <Radio/>
+      <div className="style1" style={{display:"flex",flexDirection:"row"}}>
       <TextField
         id="outlined-select-currency"
         select
-        label="Select"
+        label="No. of Children"
         className={classes.textField}
         value={values.currency}
         onChange={handleChange('currency')}
@@ -226,7 +273,7 @@ export default function OutlinedTextFields() {
             className: classes.menu,
           },
         }}
-        helperText="Please select your currency"
+        helperText="Number of Children"
         margin="normal"
         variant="outlined"
       >
@@ -237,9 +284,36 @@ export default function OutlinedTextFields() {
         ))}
       </TextField>
       <TextField
+        id="outlined-select-currency"
+        select
+        label="Gender"
+        className={classes.textField}
+        value={values.choice}
+        onChange={handleChange('choice')}
+        SelectProps={{
+          MenuProps: {
+            className: classes.menu,
+          },
+        }}
+        helperText="Please tell your gender"
+        margin="normal"
+        variant="outlined"
+      >
+        {choice.map(option => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+      </div>
+      <Checkbox/>
+    
+      </div>
+      
+      {/* <TextField
         id="outlined-select-currency-native"
         select
-        label="Native select"
+        label="Number of Children"
         className={classes.textField}
         value={values.currency}
         onChange={handleChange('currency')}
@@ -258,8 +332,8 @@ export default function OutlinedTextFields() {
             {option.label}
           </option>
         ))}
-      </TextField>
-      <TextField
+      </TextField> */}
+      {/* <TextField
         id="outlined-full-width"
         label="Label"
         style={{ margin: 8 }}
@@ -279,7 +353,7 @@ export default function OutlinedTextFields() {
         margin="normal"
         variant="outlined"
         inputProps={{ 'aria-label': 'bare' }}
-      />
+      /> */}
     </form>
   );
 }
