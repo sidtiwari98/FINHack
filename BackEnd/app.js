@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
@@ -13,7 +14,7 @@ client.on('ready', () => {
     console.log("Discord bot is legit");
 })
 
-client.login(auth.token);
+client.login(process.env.BOT_TOKEN);
 
 var api_v1 = require('./v1/api_route');
 var app = express();

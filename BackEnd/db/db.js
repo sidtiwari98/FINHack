@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-let DB_URL = "mongodb+srv://k3km4n:jaybank@cluster0-wuak6.mongodb.net/test?retryWrites=true&w=majority";
+let DB_URL = process.env.DB_URL;
 
 mongoose.connect(DB_URL);
 
