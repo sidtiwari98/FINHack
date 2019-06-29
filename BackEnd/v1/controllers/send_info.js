@@ -1,4 +1,6 @@
 let guy = require('../../db/guy');
+let { execFileSync } = require('child_process');
+const path = require('path');
 
 module.exports = (req, res) => {
     let data = req.body;
@@ -6,6 +8,11 @@ module.exports = (req, res) => {
         res.status(400).send("Bad Parameters");
         // return;
     }
+
+    let female = "0";
+    let male = "0";
+    let smoker_no = "0";
+    let smoker_yes = "0";
     /*
     dob - Date
     bmi - Number
@@ -41,6 +48,11 @@ module.exports = (req, res) => {
 
     if (data.gender == 0 || data.gender == 1){
         new_guy.gender = data.gender;
+        if (data.gender == 1){
+            male = "1";
+        } else {
+            female = "1";
+        }
     } else {
         fucku();
         return;
@@ -48,6 +60,12 @@ module.exports = (req, res) => {
 
     if (data.smoker == 0 || data.smoker == 1){
         new_guy.smoker = data.smoker;
+
+        if (data.smoker == 1){
+            smoker_yes = 1;
+        } else {
+            smoker_no = 0;
+        }
     } else {
         fucku();
         return;
@@ -60,5 +78,20 @@ module.exports = (req, res) => {
         return;
     }
 
-    res.send('.');
+    let gg = execFileSync('python3', ['fucker.py', '19', data.bmi.toString(), data.children.toString(), female, male, smoker_no, smoker_yes], {
+        cwd: path.resolve('../ML/')
+    })
+
+    // console.log(gg.toString().trim());
+    // console.log(__dirname);
+    // console.log(path.resolve('../ML/'));
+    let ml_model = gg.toString().trim();
+    let shit = ml_model.split(' ');
+    // console.log(ml_model);
+    // console.log(shit);
+
+    res.json({
+        risk: shit[0],
+        expected_cost: shit[1]
+    })
 }

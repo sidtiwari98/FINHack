@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -16,13 +16,23 @@ const useStyles = makeStyles({
         height: 440,
     },
 });
+// const  classes = useStyles();
+export default class MediaCard extends React.Component {
+    
+    constructor(props){
+        super(props)
 
-export default function MediaCard(props) {
-    const classes = useStyles();
+        this.boughtOffer=this.boughtOffer.bind(this)
+    }
+    
+    boughtOffer(){
 
+        alert("dioneeeee")
+    }
+    render(){
     return (
         <div style={{ margin: "10px" }}>
-            <Card className={classes.card} raised={true}>
+            <Card className={useStyles.card} raised={true}>
                 <CardActionArea>
                     <CardContent>
                         <Typography variant="body2" color="textSecondary" component="p">
@@ -43,6 +53,7 @@ export default function MediaCard(props) {
                             <Button size="large" color="primary">
                                 Buy Now
                             </Button>
+                            
                         </CardActions>
                         <Typography gutterBottom variant="h5" component="h2">
                             Your Quote
@@ -61,11 +72,12 @@ export default function MediaCard(props) {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary">
+                <div onClick={this.boughtOffer}><Button size="small" color="primary">
                         Learn More
-                    </Button>
+                    </Button></div>
                 </CardActions>
             </Card>
         </div>
     );
+    }
 }
