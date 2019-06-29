@@ -28,13 +28,13 @@ class Footer extends Component {
                         <div className='col-4'>
                           <div className='footer__nav-title'>Premium Offers</div>
                           <div className='link link--white footer__nav-link'>
-                            <a className='link__text' href='http://www.google.com/'>Offer 1</a>
+                            <a className='link__text' href='http://www.google.com/'>Golden band</a>
                           </div>
                           <div className='link link--white footer__nav-link'>
-                            <a className='link__text' href='http://www.google.com/'>Offer 2</a>
+                            <a className='link__text' href='http://www.google.com/'>Silver band</a>
                           </div>
                           <div className='link link--white footer__nav-link'>
-                            <a className='link__text' href='http://www.google.com/'>Offer 3</a>
+                            <a className='link__text' href='http://www.google.com/'>Bronze band</a>
                           </div>
                         </div>
                         <div className='col-4'>

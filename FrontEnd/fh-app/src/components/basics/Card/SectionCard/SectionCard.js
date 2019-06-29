@@ -32,9 +32,9 @@ export default class SectionCard extends Component {
                             </div>
                             <div className='card__button-row'>
                                 <div className='button d-inline-block button--lg-orange'>
-                                    <button type='button'>
+                                    {/* <button type='button'>
                                         {this.props.currentSectionCard.button}
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                             {

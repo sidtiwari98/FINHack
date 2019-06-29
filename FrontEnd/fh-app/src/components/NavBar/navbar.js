@@ -24,8 +24,11 @@ export default function SimpleAppBar() {
     <div className={classes.root}>
       <AppBar position="static" color="inherit">
         <Toolbar>
-         <Typography className={classes.typo} variant="h6"  >
+         <Typography className={classes.typo} variant="h4"  >
             P2PI Insurance
+          </Typography>
+          <Typography variant="subtitle2">
+              Everything is better together
           </Typography>
           
         </Toolbar>
