@@ -74,6 +74,13 @@ export default function OutlinedTextFields() {
   };
 
   return (
+    <div>
+    <div style={{
+      textAlign: "center",
+      padding: "50px",
+  }}>
+      <p style={{ color: "black", fontSize: "48px", fontFamily: "Verdana" }}>Get Your Quote</p>
+  </div>
     <form className={classes.container} noValidate autoComplete="off">
       <TextField
         id="outlined-name"
@@ -373,5 +380,6 @@ export default function OutlinedTextFields() {
       /> */}
 
     </form>
+    </div>
   );
 }

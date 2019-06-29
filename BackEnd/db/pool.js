@@ -3,6 +3,7 @@ let Schema = mongoose.Schema;
 
 let pool_schema = new Schema({
     premium: Number,
+    customer_premium: Number,
     ppl: Number,
     cover: Number,
     risk: Number
