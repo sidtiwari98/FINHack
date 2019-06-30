@@ -9,5 +9,5 @@
   - Prototype of chatbot to counter fraudulent claims of insurances
 
 # Demo at
-  - p2pi user website link [p2pi.tech:3000](p2pi.tech:3000)
-  - user admin dashboard link [p2pi.tech:3001](p2pi.tech:3001)
+  - p2pi user website link [http://p2pi.tech:3000](p2pi.tech:3000)
+  - user admin dashboard link [http://p2pi.tech:3001](p2pi.tech:3001)
